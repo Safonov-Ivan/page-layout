@@ -1,0 +1,9 @@
+// width 1500px
+$max-width:87.5em; 
+
+@mixin text_size_weit_color_height( $size, $weight, $color, $line_height ){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    line-height: $line_height;
+}

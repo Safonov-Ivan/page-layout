@@ -1,0 +1,49 @@
+.results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5;
+  
+    .results-info {
+      font-size: 14px;
+
+      @media screen and (max-width:320px){
+        max-width: 100px;
+        display: flex;
+        font-size: 14px;
+        flex-direction: column;
+      }
+      .show-options {
+        margin-left: 10px;
+        
+       
+        .option {
+          margin-left: 5px;
+          text-decoration: none;
+          color: #2F2F2F;
+        }
+      }
+    }
+  
+    .view-options {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+      background: none;
+     
+    }
+  
+    .all-courses {
+      padding: 5px 215px;
+      
+      @media screen and (max-width:320px){
+        padding: 5px 15px;
+      }
+      a {
+        text-decoration: none;
+        color: #5C5C5C;
+      } 
+    }
+  }
+  

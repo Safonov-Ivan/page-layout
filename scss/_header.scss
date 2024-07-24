@@ -1,0 +1,159 @@
+body 
+ 
+  .site-header {
+    background-color: #fff;
+    padding: 29px 0;
+
+
+    .container {
+      width: 100%;
+      max-width: $max-width;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (max-width: 660px) {
+        padding: 0 10px;
+        }
+    }
+  
+    .logo img {
+      max-height: 50px;
+    }
+    .main-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .backed{
+            padding-right: 17px;
+        }
+    }
+
+    .main-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 56px;
+
+
+      @media (max-width: 860px) {
+        padding: 5px;
+        gap: 12px;
+      }
+
+      @media (max-width: 660px) {
+       display: none;
+       }
+      
+      li {
+
+        a {
+          width: 100%;
+          text-align: center;
+          position: relative;
+          cursor: pointer;
+          text-decoration: none;
+          white-space: nowrap;
+          color: #FFC000;
+          font-weight: bold;
+          transition: color 0.3s;
+          background: linear-gradient(90deg, rgba(255, 192, 0, 1) 0%, rgba(255, 138, 0, 1) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-family: "Roboto", sans-serif;
+        }
+
+        a:after {
+          width: 100%;
+          display: block;
+          position: absolute;
+          left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+          width: 0;/*задаём длинну линии до наведения курсора*/
+          height: 2px; 
+          background-color: #FFC000;
+          content: "";
+          transition: width 0.3s ease-out;
+        }
+        
+        a:hover:after,
+        a:focus::before {
+          width: 100%; 
+        }
+      
+      }
+    }
+  
+    .header-actions {
+      display: flex;
+      align-items: center;
+  
+      .contributor-btn, .login-btn {
+        border: none;
+        padding: 10px 15px;
+        margin: 0 5px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+
+        @media (max-width: 480px) {
+         margin: 10px 0 5px 0;
+        }
+      }
+  
+      .contributor-btn {
+        color: #fff;
+        padding: 20px 27px 19px 28px;
+        background: linear-gradient(90deg, rgba(255, 192, 0, 1) 0%, rgba(255, 138, 0, 1) 100%);
+        color: #FFFFFF;
+        border-radius: 50px;
+        font-family: "Roboto", sans-serif;
+       
+        @media (max-width: 860px) {
+          padding: 11px 11px 12px 8px;
+        }
+      }
+  
+      .login-btn {
+        background-color: #fff;
+        padding: 20px 60px 19px 61px;
+        background: linear-gradient(90deg, rgba(255, 192, 0, 1) 0%, rgba(255, 138, 0, 1) 100%);
+        color: #FFFFFF;
+        border-radius: 50px;
+        font-family: "Roboto", sans-serif;
+
+        @media (max-width: 860px) {
+          padding: 11px 11px 12px 8px;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 600px) {
+    
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .main-nav ul {
+      flex-direction: column;
+  
+      li {
+        margin: 10px 0;
+      }
+    }
+  
+    .header-actions {
+      flex-direction: column;
+      align-items: flex-start;
+  
+      .contributor-btn, .login-btn {
+        margin: 5px 0;
+      }
+    }
+  }
+  
