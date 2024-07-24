@@ -21,10 +21,7 @@
         @include flex-grid(2, 1px); 
       }  
         
-    @media screen and(max-width: 1200px) {
-      @include flex-grid(3, 16px); 
-      grid-template-columns: 4.5fr 1fr; 
-    }
+ 
     
   
     @media (max-width: 1065px) {
